@@ -5,8 +5,80 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f9b8da9-47c0-4bb4-8231-17404f1c8e5b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/animations/info.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/markdown.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/TODO/next_steps.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/patterns/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/patterns/bloc_inheritance_pattern.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/patterns/context_access_pattern.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/product/strategy_roadmap.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/android/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Runner/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/extensions/context_extension.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/extensions/context_extension.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/data/datasources/example_local_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/data/datasources/example_remote_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/data/models/example_models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/data/repositories/example_repository_impl.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/domain/entities/example.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/domain/repositories/example_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/modules/sample_module/domain/usecases/example_usecase.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/res/app_theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/res/app_theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/res/colours.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/res/colours.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/services/dependency_injection/injection_container.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/services/dependency_injection/injection_container.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/services/dependency_injection/injection_container_main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/services/dependency_injection/injection_container_main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/services/router/router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/services/router/router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/services/router/router_main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/services/router/router_main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/shared/screens/page_under_construction.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/shared/screens/page_under_construction.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/core/utils/preference_keys.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/core/utils/preference_keys.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/data/datasources/example_local_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/data/datasources/example_remote_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/data/models/example_models.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/data/repositories/example_repository_impl.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/domain/entities/example.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/domain/repositories/example_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/domain/usecases/example_usecase.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/bloc/example_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/bloc/example_event.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/bloc/example_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/providers/example_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/screens/example_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/shimmer_views/example_loading_view.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/views/example_view.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/example/presentation/widgets/example_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/data/datasources/template_local_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/data/datasources/template_remote_data_source.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/data/models/template_version_model.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/data/repositories/template_repository_impl.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/domain/entities/template_version.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/domain/repositories/template_repository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/domain/usecases/get_current_template_version.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/domain/usecases/open_github_url.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/bloc/template_bloc.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/bloc/template_event.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/bloc/template_state.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/providers/template_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/screens/splash_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/screens/template_screen.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/shimmer_views/example_loading_view.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/views/template_view.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/features/template/presentation/widgets/social_media_icon.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/data/datasources/template_data_source_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/data/models/template_version_model_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/domain/entity/fake_template_version.mock.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/domain/repositories/template_repository.mock.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/domain/usecases/get_current_template_version_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/domain/usecases/open_github_url_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/features/template/presentation/bloc/template_bloc_test.dart" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,16 +142,19 @@
     "Flutter Test.tests in template_version_model_test.dart.executor": "Run",
     "Flutter.main.dart.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "master",
+    "io.flutter.project.isFirstOpen": "true",
     "io.flutter.reload.alreadyRun": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/o-maisan.auliya/StudioProjects/flutter-clean-architecture-tdd-template/lib/src/features",
+    "last_opened_file_path": "C:/Users/o-maisan.auliya/Documents/Project/asset-management-app",
     "settings.editor.selected.configurable": "flutter.settings",
     "show.migrate.to.gradle.popup": "false"
   },
@@ -91,6 +166,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\o-maisan.auliya\Documents\Project\asset-management-app" />
       <recent name="C:\Users\o-maisan.auliya\StudioProjects\flutter-clean-architecture-tdd-template\lib\src\features" />
       <recent name="C:\Users\o-maisan.auliya\StudioProjects\flutter-clean-architecture-tdd-template\lib\src\core\modules" />
       <recent name="C:\Users\o-maisan.auliya\StudioProjects\flutter-clean-architecture-tdd-template\lib\src\features\navigation\presentation\widgets" />
@@ -102,9 +178,9 @@
       <recent name="C:\Users\o-maisan.auliya\StudioProjects\flutter-clean-architecture-tdd-template\test\features\template\domain\entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in template_bloc_test.dart">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
-      <option name="additionalArgs" value="--dart-define-from-file=env.json" />
+      <option name="additionalArgs" value="-v" />
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
       <method v="2" />
     </configuration>
@@ -136,6 +212,14 @@
       <option name="useRegexp" value="false" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Flutter.main.dart" />
+      <item itemvalue="Flutter Test.[SplashScreenMove] event handler" />
+      <item itemvalue="Flutter Test.Should emit [GetCurrentTemplateVersionSuccess] when [GetCurrentTemplateVersionEvent] is added and return success" />
+      <item itemvalue="Flutter Test.Should throw [ServerException] when launch return false" />
+      <item itemvalue="Flutter Test.tests in template_bloc_test.dart" />
+      <item itemvalue="Flutter Test.tests in template_data_source_test.dart" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Flutter Test.tests in template_bloc_test.dart" />

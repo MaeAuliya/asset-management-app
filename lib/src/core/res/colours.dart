@@ -52,10 +52,14 @@ class Colours {
   // =====================
   // Primary Palette
   // =====================
-  static const Color primaryBlue = Color(0xFF2F80ED);
-  static const Color secondaryBlue = Color(0xFF73A9F3);
-  static const Color darkBlue = Color(0xFF092C4C);
-  static const Color lightBlue = Color(0xFFEAF3FF);
+  static const Color primaryBlue = Color(0xFF0047AB);
+  static const Color secondaryBlue = Color(0xFF7EA9F8);
+  static const Color darkBlue = Color(0xFF052A68);
+  static const Color lightBlue = Color(0xFFEAF2FF);
+  static const Color blueSurface = Color(0xFFF4F7FC);
+  static const Color blueSurfaceStrong = Color(0xFFDDE8FF);
+  static const Color blueStroke = Color(0xFFC6D7FF);
+  static const Color blueInk = Color(0xFF14315F);
   static const Color yellow = Color(0xffFDC300);
 
   // =====================
@@ -74,15 +78,15 @@ class Colours {
   // =====================
   // Neutral / Gray Scale
   // =====================
-  static const Color gray50 = Color(0xFFFAFAFA);
-  static const Color gray100 = Color(0xFFF5F5F5);
-  static const Color gray200 = Color(0xFFE5E7EB);
-  static const Color gray300 = Color(0xFFD1D5DB);
-  static const Color gray400 = Color(0xFF9CA3AF);
-  static const Color gray500 = Color(0xFF6B7280); // "regular gray"
-  static const Color gray600 = Color(0xFF4B5563);
-  static const Color gray700 = Color(0xFF374151);
-  static const Color gray800 = Color(0xFF1F2937);
+  static const Color gray50 = Color(0xFFFCFCFD);
+  static const Color gray100 = Color(0xFFF5F7FB);
+  static const Color gray200 = Color(0xFFE8EDF5);
+  static const Color gray300 = Color(0xFFD5DDE8);
+  static const Color gray400 = Color(0xFFA3B0C2);
+  static const Color gray500 = Color(0xFF6D7A8C); // "regular gray"
+  static const Color gray600 = Color(0xFF526074);
+  static const Color gray700 = Color(0xFF334155);
+  static const Color gray800 = Color(0xFF182537);
   static const Color gray900 = Color(0xFF111827);
 
   // =====================

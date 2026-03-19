@@ -4,30 +4,51 @@ Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
     case SplashScreen.routeName:
       return _pageBuilder(
-        (_) => BlocProvider(
-          create: (_) => sl<TemplateBloc>(),
-          child: const SplashScreen(),
-        ),
+        (_) => const SplashScreen(),
         settings: settings,
       );
-    case TemplateScreen.routeName:
+    case OnboardingWelcomeScreen.routeName:
       return _pageBuilder(
-        (_) => BlocProvider(
-          create: (_) => sl<TemplateBloc>(),
-          child: const TemplateScreen(),
-        ),
+        (_) => const OnboardingWelcomeScreen(),
         settings: settings,
       );
-
-    // // Bottom Navigation
-    // case BottomNavigationCore.routeName:
-    //   return _pageBuilder(
-    //     (_) => const BottomNavigationCore(),
-    //     settings: settings,
-    //   );
+    case CameraPermissionScreen.routeName:
+      return _pageBuilder(
+        (_) => const CameraPermissionScreen(),
+        settings: settings,
+      );
+    case NotificationPermissionScreen.routeName:
+      return _pageBuilder(
+        (_) => const NotificationPermissionScreen(),
+        settings: settings,
+      );
+    case AuthEntryScreen.routeName:
+      return _pageBuilder(
+        (_) => const AuthEntryScreen(),
+        settings: settings,
+      );
+    case UserShellScreen.routeName:
+      return _pageBuilder(
+        (_) => const UserShellScreen(),
+        settings: settings,
+      );
+    case AdminShellScreen.routeName:
+      return _pageBuilder(
+        (_) => const AdminShellScreen(),
+        settings: settings,
+      );
+    case NotificationsScreen.routeName:
+      return _pageBuilder(
+        (_) => const NotificationsScreen(),
+        settings: settings,
+      );
     default:
       return _pageBuilder(
-        (_) => const PageUnderConstruction(),
+        (_) => const PageUnderConstruction(
+          title: 'Unknown route',
+          message:
+              'The requested route is not mapped yet. Add it to the router as the next feature slice is implemented.',
+        ),
         settings: settings,
       );
   }

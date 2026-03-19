@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 
 import 'src/core/res/app_theme.dart';
 import 'src/core/services/dependency_injection/injection_container.dart';
 import 'src/core/services/router/router.dart';
-import 'src/features/template/presentation/providers/template_provider.dart';
-import 'src/features/template/presentation/screens/splash_screen.dart';
+import 'src/features/auth/presentation/bloc/auth_bloc.dart';
+import 'src/features/auth/presentation/screens/splash_screen.dart';
 
 final navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Init Mobile Orientations
   await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-
-  // // Init Dependencies
   await initDependencies();
 
-  // Run App
   runApp(const MyApp());
 }
 
@@ -28,24 +24,23 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
+    return MultiBlocProvider(
       providers: [
-        /// Example Features
-        ChangeNotifierProvider(create: (_) => TemplateProvider()),
-        // ChangeNotifierProvider(create: (_) => ExampleProvider()),
+        BlocProvider<AuthBloc>(
+          create: (_) => sl<AuthBloc>(),
+        ),
       ],
       child: MaterialApp(
-        title: 'Flutter Clean Architecture TDD Template',
+        title: 'Office Asset Lending App',
         showPerformanceOverlay: false,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
+        themeMode: ThemeMode.light,
         onGenerateRoute: generateRoute,
         initialRoute: SplashScreen.routeName,
         navigatorKey: navigatorKey,
-        navigatorObservers: [
-          // sl<MyRouteObserver>(),
-        ],
+        navigatorObservers: const [],
         builder: (context, child) {
           return MediaQuery(
             data: MediaQuery.of(context).copyWith(

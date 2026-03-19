@@ -7,7 +7,14 @@ import '../../res/texts.dart';
 import '../../res/typography.dart';
 
 class PageUnderConstruction extends StatelessWidget {
-  const PageUnderConstruction({super.key});
+  const PageUnderConstruction({
+    this.title = 'Page Under Construction',
+    this.message = Texts.pageUnderConstruction,
+    super.key,
+  });
+
+  final String title;
+  final String message;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +25,8 @@ class PageUnderConstruction extends StatelessWidget {
           spacing: context.heightScale * 18,
           children: [
             SvgPicture.asset(MediaRes.pageNotFoundVector),
-            const CoreText(Texts.pageUnderConstruction),
+            CoreText(title, role: TextRole.titleLg, textAlign: TextAlign.center),
+            CoreText(message, textAlign: TextAlign.center, maxLines: 4),
           ],
         ),
       ),

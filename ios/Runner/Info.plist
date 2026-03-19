@@ -43,6 +43,10 @@
 	</array>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Camera access is used to scan asset barcodes for borrowing and return flows.</string>
+	<key>NSUserNotificationUsageDescription</key>
+	<string>Notifications are used for due reminders, overdue alerts, and approval updates.</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 </dict>

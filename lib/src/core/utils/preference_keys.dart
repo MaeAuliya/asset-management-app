@@ -29,6 +29,10 @@ class PreferenceKeys {
 
   /// Key for storing the authentication token.
   static const kToken = 'token';
+  static const kHasOpenedApp = 'has_opened_app';
+  static const kOnboardingCompleted = 'onboarding_completed';
+  static const kSignedIn = 'signed_in';
+  static const kSignedInRole = 'signed_in_role';
 
   // ---------------------------------------------------------------------------
   // Example

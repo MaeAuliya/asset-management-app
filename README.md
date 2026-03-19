@@ -1,203 +1,128 @@
-# 🧩 Flutter Clean Architecture TDD Template
+# Office Asset Lending App
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.35.xx-blue?logo=flutter&logoColor=white)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.9.xx-0175C2?logo=dart&logoColor=white)](https://dart.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+Mobile-first office asset lending application for managing laptop and projector borrowing in a structured, trackable, and notification-centered way.
 
+## Product Overview
+- Digitizes office borrowing and return workflows that are currently handled manually.
+- Focuses on real-time asset availability, clear borrowing status, and reminder-driven return management.
+- Supports two roles:
+  - `User`: employee borrowing and returning assets
+  - `Admin`: operator managing assets, approvals, monitoring, and alerts
 
-A **Flutter project template** based on **Clean Architecture** and **Test-Driven Development (TDD)**.  
-This repository provides a scalable, maintainable, and modular project structure to help you kickstart new Flutter applications with best practices in mind.
+## Main Problems Solved
+- Borrowing and return schedules are disorganized.
+- Asset availability is hard to track in real time.
+- There is no reliable reminder flow for overdue or upcoming returns.
 
----
+## Core Features
 
-## 🚀 Tech Stack
+### User
+- Login and logout
+- Browse assets by category
+- Borrow single assets through barcode scanning
+- Submit bulk borrowing requests
+- Return borrowed assets
+- View notifications and return reminders
+- View borrowing history and borrowing status detail
 
-### Framework & Language
-- Flutter **3.35.xx**
-- Dart **3.9.xx**
+### Admin
+- Manage users
+- Manage assets
+- Configure borrowing duration rules
+- Approve bulk borrowing requests
+- Monitor availability, overdue items, and pending approvals
+- View and export history
+- Generate and print barcodes
+- Receive urgent alerts when assets are overdue or needed for priority use
 
-### Architecture & State Management
-- [Bloc](https://pub.dev/packages/flutter_bloc) – primary state management
-- [Flutter Bloc](https://pub.dev/packages/flutter_bloc) - Flutter widgets that make it easy to integrate blocs
-- [Provider](https://pub.dev/packages/provider) – data binding
-- [getIt](https://pub.dev/packages/get_it) – dependency injection
-- [Equatable](https://pub.dev/packages/equatable) – value equality
-- [Dartz](https://pub.dev/packages/dartz) - Either Success or Failure Handler
-- [flutter_lints](https://pub.dev/packages/flutter_lints) – linting & code style
+## Business Rules
+- Asset scope is limited to `Laptop` and `Projector`.
+- Single-item borrowing can be completed by scanning the physical barcode attached to the asset.
+- Bulk borrowing requires admin approval.
+- Bulk borrowing uses an admin-generated barcode.
+- Laptop borrowing commonly supports training sessions and medium-to-large batch requests.
+- Borrowing duration is configurable by admin.
 
-### Data & API
-- [Dio](https://pub.dev/packages/dio) – HTTP client
-- [Shared Preferences](https://pub.dev/packages/shared_preferences) – key-value storage
+## Product Direction
+- Mobile-first user experience
+- Clean, professional enterprise utility design
+- Fast barcode-based actions
+- Strong reminders, overdue alerts, and urgent notifications
+- Clear status communication: `Available`, `Borrowed`, `Overdue`, `Pending Approval`
 
-### Utilities
-- [flutter_svg](https://pub.dev/packages/flutter_svg) – SVG rendering
-- [lottie](https://pub.dev/packages/lottie) – animations
-- [url_launcher](https://pub.dev/packages/url_launcher) – external URL launcher
-- [package_info_plus](https://pub.dev/packages/package_info_plus) – app versioning
+## Tech Stack
 
-### Testing
-- [flutter_test](https://api.flutter.dev/flutter/flutter_test/flutter_test-library.html) – unit testing
-- [mocktail](https://pub.dev/packages/mocktail) – mocking
-- [bloc_test](https://pub.dev/packages/bloc_test) – bloc testing utilities
+### Existing Template Foundation
+This project started from a Flutter Clean Architecture template and keeps its current base dependencies and architecture direction:
+- Flutter
+- Dart
+- Bloc / flutter_bloc
+- Provider
+- get_it
+- Equatable
+- Dartz
+- Dio
+- Shared Preferences
+- flutter_svg
+- lottie
+- url_launcher
+- package_info_plus
+- flutter_test
+- mocktail
+- bloc_test
 
----
+### Planned Product Additions
+- Supabase for primary database
+- Supabase-backed authentication and role mapping
+- Supabase real-time updates for asset availability and request status
+- Supabase-supported push notification integration strategy
 
-## 📂 Project Structure
+## Project Structure
 ```text
-project_root/
-│
-├── android/                # Native Android project
-├── ios/                    # Native iOS project
-├── assets/
-│   ├── animations/         # Lottie animations
-│   ├── fonts/              # Custom fonts
-│   ├── icons/              # App icons
-│   ├── images/             # PNG/JPG images
-│   └── vectors/            # SVG vector files
-│
-├── lib/
-│   └── main.dart           # Main Program
-│   └── src/
-│       ├── core/                   
-│       │   ├── enums/              # App-wide enumerations
-│       │   ├── errors/             # Error handling & exceptions
-│       │   ├── extensions/         # Dart extensions
-│       │   ├── res/                # Resources (colors, typography, etc.)
-│       │   ├── services/           # External services (API, Firebase, etc.)
-│       │   ├── shared/             # Shared widgets/components
-│       │   ├── usecases/           # Contract Abstraction for usecase pattern
-│       │   ├── utils/              # Utility helpers
-│       │   └── modules/            # Reusable domain/data modules
-│       │       └── sample_module/  
-│       │           ├── domain/
-│       │           │   ├── entities/
-│       │           │   │   └── sample_entity.dart
-│       │           │   ├── repositories/
-│       │           │   │   └── sample_repository.dart
-│       │           │   └── usecases/
-│       │           │       └── sample_usecase.dart
-│       │           └── data/
-│       │               ├── datasources/
-│       │               │   └── sample_remote_data_source.dart
-│       │               └── repositories/
-│       │                   └── sample_repository_impl.dart
-│       │
-│       └── features/
-│           └── feature_a/
-│               ├── data/
-│               │   ├── datasources/
-│               │   │   ├── feature_a_remote_data_source.dart
-│               │   │   └── feature_a_local_data_source.dart
-│               │   ├── models/
-│               │   │   └── feature_a_model.dart
-│               │   └── repositories/
-│               │       └── feature_a_repository_impl.dart
-│               │
-│               ├── domain/
-│               │   ├── entities/
-│               │   │   └── feature_a_entity.dart
-│               │   ├── repositories/
-│               │   │   └── feature_a_repository.dart
-│               │   └── usecases/
-│               │       └── get_feature_a_items.dart
-│               │
-│               └── presentation/
-│                   ├── bloc/
-│                   │   ├── feature_a_bloc.dart
-│                   │   ├── feature_a_event.dart
-│                   │   └── feature_a_state.dart
-│                   ├── providers/
-│                   │   └── feature_a_provider.dart
-│                   ├── screens/
-│                   │   └── feature_a_screen.dart
-│                   ├── shimmer_views/
-│                   │   └── feature_a_list_shimmer.dart
-│                   ├── views/
-│                   │   └── feature_a_list_view.dart
-│                   └── widgets/
-│                       └── feature_a_card.dart
-│
-├── test/
-│   ├── core/
-│   │   └── modules/
-│   │       └── sample_module/
-│   │           ├── domain/
-│   │           │   └── usecases/sample_usecase_test.dart
-│   │           └── data/
-│   │               └── repositories/sample_repository_impl_test.dart
-│   │
-│   └── features/
-│       └── feature_a/
-│           ├── data/
-│           │   ├── datasources/
-│           │   │   └── feature_a_remote_data_source_test.dart
-│           │   ├── models/
-│           │   │   └── feature_a_model_test.dart
-│           │   └── repositories/
-│           │       └── feature_a_repository_impl_test.dart
-│           │
-│           ├── domain/
-│           │   ├── entities/
-│           │   │   └── feature_a_entity_test.dart
-│           │   ├── repositories/
-│           │   │   └── feature_a_repository_test.dart
-│           │   └── usecases/
-│           │       └── get_feature_a_items_test.dart
-│           │
-│           └── presentation/
-│               └── bloc/
-│                   └── feature_a_bloc_test.dart
-│
-└── pubspec.yaml
+docs/
+  patterns/   implementation conventions and architecture usage rules
+  product/    product strategy, UI/UX specification, and user flows
+  TODO/       execution roadmap and next implementation steps
+
+lib/
+  main.dart
+  src/
+    core/
+    features/
+
+test/
 ```
 
-## 🧪 Testing
+## Documentation Index
+- `docs/product/strategy_roadmap.md`: product strategy, scope, roadmap, and success metrics
+- `docs/product/mobile_app_ui_ux_spec.md`: mobile screen specifications and UI behavior
+- `docs/product/user_flows.md`: end-to-end user and admin flows
+- `docs/patterns/README.md`: engineering convention index
+- `docs/TODO/next_steps.md`: implementation backlog and milestone ordering
 
-This project is set up for **unit testing only**:  
-- **Data layer** → datasources, models, repositories  
-- **Domain layer** → entities, repositories, usecases  
-- **Presentation layer** → bloc only
+## Current Status
+- Repository structure is already prepared with Clean Architecture conventions.
+- Product documentation is being used to convert the template into an office asset lending application.
+- Supabase integration is planned but not yet implemented in this documentation pass.
 
-Run tests with:
+## Development Workflow
+- For UI-facing work, the expected sequence is: `plan -> design in Google Stitch -> sync design intent back into docs/product -> implement`.
+- `docs/product/` remains the repository source of truth for product and UI intent.
+- Google Stitch is the design workspace to use before implementing user-facing screens and flows.
+- Current approved default Stitch project for this repo: `Asset Catalog` (`projects/13780564782865433795`).
 
-```bash
-flutter test
-```
+## Development Commands
+- `flutter pub get`
+- `flutter run`
+- `flutter analyze`
+- `flutter test`
+- `dart format .`
 
-## 📌 Notes
+## Notes
+- Check `docs/` before starting product-facing implementation work.
+- Treat `docs/product/` as the product source of truth.
+- Treat `docs/patterns/` as the implementation-convention source of truth.
 
-- Features inside `features/` follow the **data → domain → presentation** pattern.  
-- `presentation` includes `bloc`, `providers`, `screens`, `views`, `widgets`, and `shimmer_views`, but **only the bloc layer is unit tested**.  
-- Core modules can be added in `lib/src/core/` for reusable code.  
-- This template is designed to be scalable for small to enterprise-level applications.  
-
----
-
-## 🚀 Apps Built with This Template  
-
-This **TDD Clean Architecture Template** has been used as the foundation for several real and experimental apps — proving its scalability, modularity, and test-driven reliability in real-world use cases.
-
-| App Name | Description | Repository                                                                                                      |
-|-----------|--------------|-----------------------------------------------------------------------------------------------------------------|
-| 🖱️ **Tapper Plus App** | Example app for experimenting with **local** and **remote data sources**, fully developed with **TDD** and **Clean Architecture**. | [tapper-plus-app][https://github.com/MaeAuliya/tapper-plus-app] |
-| 🌦️ **Weatherly Demo** | Minimal demo showcasing **REST API integration** and **repository pattern** implementation. | *(Coming Soon)*                                                                                                 |
-| 💰 **Money Manager** | Personal finance management app with **biometric authentication**, **secure local storage**, and **expense analytics**. | *(Coming soon)*                                                                                                 |
-
-> 💡 Have you built your own app using this template?  
-> Feel free to **open a pull request** and showcase your project here!  
-
----
-
-### 🧱 Why List These Apps?  
-- To demonstrate **real implementations** of this architecture.  
-- To inspire other developers using this template.  
-- To serve as a **reference hub** for common Clean Architecture + TDD patterns. 
-
-## 🔮 Upcoming Features
-
-Planned updates for this template:
-
-- [x] **CI/CD Workflow** using GitHub Actions (Flutter analyze + test)  
-- [ ] Example implementation of a **core module** (e.g., error handling, app theme)  
-- [ ] Pre-configured **Firebase setup guide**
-- [ ] Automation Deploy to **Play Store** or **App Store** with **Fastlane**  
+## Engram Memory
+- To ingest Codex session history into the local Engram database for this project, run: `node scripts/engram_codex_ingest.mjs --cwd C:\Users\o-maisan.auliya\Documents\Project\asset-management-app`
+- This writes session-derived memory into `~/.engram/default.db` and tracks progress in `~/.config/engram/codex-ingest-state.json`.
